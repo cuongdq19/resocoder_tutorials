@@ -31,6 +31,7 @@ class SignInForm extends StatelessWidget {
       builder: (ctx, state) {
         return Form(
           child: ListView(
+            padding: const EdgeInsets.all(8),
             children: <Widget>[
               const Text(
                 '📝',
@@ -83,26 +84,31 @@ class SignInForm extends StatelessWidget {
                 children: <Widget>[
                   Expanded(
                     child: FlatButton(
-                      child: const Text('SIGN IN'),
                       onPressed: () {
                         ctx.bloc<SignInFormBloc>().add(const SignInFormEvent
                             .signInWithEmailAndPasswordPressed());
                       },
+                      child: const Text('SIGN IN'),
                     ),
                   ),
                   Expanded(
                     child: FlatButton(
-                      child: const Text('REGISTER'),
                       onPressed: () {
                         ctx.bloc<SignInFormBloc>().add(const SignInFormEvent
                             .registerWithEmailAndPasswordPressed());
                       },
+                      child: const Text('REGISTER'),
                     ),
                   )
                 ],
               ),
               RaisedButton(
                 color: Colors.lightBlue,
+                onPressed: () {
+                  ctx
+                      .bloc<SignInFormBloc>()
+                      .add(const SignInFormEvent.signInWithGooglePressed());
+                },
                 child: Text(
                   'SIGN IN WITH GOOGLE',
                   style: TextStyle(
@@ -110,12 +116,11 @@ class SignInForm extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                onPressed: () {
-                  ctx
-                      .bloc<SignInFormBloc>()
-                      .add(const SignInFormEvent.signInWithGooglePressed());
-                },
-              )
+              ),
+              if (state.isSubmitting) ...[
+                const SizedBox(height: 8),
+                const LinearProgressIndicator(),
+              ],
             ],
           ),
         );
