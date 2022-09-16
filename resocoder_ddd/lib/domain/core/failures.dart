@@ -11,11 +11,9 @@ abstract class ValueFailure<T> with _$ValueFailure<T> {
   }) = ExceedingLength<T>;
   const factory ValueFailure.empty({
     @required String failedValue,
-    @required int max,
   }) = Empty<T>;
   const factory ValueFailure.multiline({
     @required T failedValue,
-    @required int max,
   }) = Multiline<T>;
   const factory ValueFailure.listTooLong({
     @required T failedValue,

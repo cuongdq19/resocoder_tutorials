@@ -10,4 +10,4 @@ Future<void> main() async {
   configureInjection(Environment.prod);
   await Firebase.initializeApp();
   runApp(AppWidget());
-}
+}                                                       
