@@ -27,6 +27,16 @@ abstract class Note implements _$Note {
       );
 
   Option<ValueFailure<dynamic>> get failureOption {
-    return body.value.andThen(todos.value).fold((f) => some(f), (_) => none());
+    return body.failureOrUnit
+        .andThen(todos.failureOrUnit)
+        .andThen(
+          todos
+              .getOrCrash()
+              .map((todoItem) => todoItem.failureOption)
+              .filter((o) => o.isSome())
+              .getOrElse(0, (_) => none())
+              .fold(() => right(unit), (f) => left(f)),
+        )
+        .fold((f) => some(f), (_) => none());
   }
 }
