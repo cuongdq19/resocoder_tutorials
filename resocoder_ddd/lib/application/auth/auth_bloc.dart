@@ -33,6 +33,5 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
   }
 
   @override
-  // TODO: implement initialState
   AuthState get initialState => const AuthState.initial();
 }

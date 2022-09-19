@@ -1,5 +1,5 @@
 import 'package:dartz/dartz.dart';
-import 'package:firebase_auth/firebase_auth.dart' hide User;
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:google_sign_in/google_sign_in.dart';
@@ -8,7 +8,7 @@ import 'package:resocoder_ddd/domain/auth/auth_failure.dart';
 import 'package:resocoder_ddd/domain/auth/i_auth_facade.dart';
 import 'package:resocoder_ddd/domain/auth/user.dart';
 import 'package:resocoder_ddd/domain/auth/value_objects.dart';
-import 'package:resocoder_ddd/infrastructure/auth/firebase_user_mapper.dart';
+import './firebase_user_mapper.dart';
 
 @LazySingleton(as: IAuthFacade)
 class FirebaseAuthFacade implements IAuthFacade {
@@ -55,8 +55,9 @@ class FirebaseAuthFacade implements IAuthFacade {
         password: passwordStr,
       );
       return right(unit);
-    } on FirebaseAuthException catch (e) {
-      if (e.code == 'wrong-password' || e.code == 'user-not-found') {
+    } on PlatformException catch (e) {
+      if (e.code == 'ERROR_WRONG_PASSWORD' ||
+          e.code == 'ERROR_USER_NOT_FOUND') {
         return left(const AuthFailure.invalidEmailAndPasswordCombination());
       } else {
         return left(const AuthFailure.serverError());
@@ -75,7 +76,7 @@ class FirebaseAuthFacade implements IAuthFacade {
 
       final googleAuthentication = await googleUser.authentication;
 
-      final authCredential = GoogleAuthProvider.credential(
+      final authCredential = GoogleAuthProvider.getCredential(
         idToken: googleAuthentication.idToken,
         accessToken: googleAuthentication.accessToken,
       );
@@ -96,5 +97,5 @@ class FirebaseAuthFacade implements IAuthFacade {
 
   @override
   Future<Option<User>> getSignedInUser() async =>
-      optionOf(_firebaseAuth.currentUser?.toDomain());
+      _firebaseAuth.currentUser().then((value) => optionOf(value?.toDomain()));
 }
