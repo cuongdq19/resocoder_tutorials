@@ -1,5 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:resocoder_ddd/domain/core/value_objects.dart';
+
+import '../core/value_objects.dart';
 
 part 'user.freezed.dart';
 

@@ -1,7 +1,8 @@
 import 'package:dartz/dartz.dart';
 import 'package:kt_dart/collection.dart';
-import 'package:resocoder_ddd/domain/notes/note.dart';
-import 'package:resocoder_ddd/domain/notes/note_failure.dart';
+
+import 'note.dart';
+import 'note_failure.dart';
 
 abstract class INoteRepository {
   // watch notes
