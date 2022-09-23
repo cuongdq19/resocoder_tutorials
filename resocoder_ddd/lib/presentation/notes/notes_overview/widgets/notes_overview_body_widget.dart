@@ -14,6 +14,7 @@ class NotesOverviewBody extends StatelessWidget {
           ),
           loadSuccess: (state) {
             return ListView.builder(
+              itemCount: state.notes.size,
               itemBuilder: (c, i) {
                 final note = state.notes[i];
                 if (note.failureOption.isSome()) {

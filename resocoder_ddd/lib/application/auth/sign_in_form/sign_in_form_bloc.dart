@@ -92,6 +92,5 @@ class SignInFormBloc extends Bloc<SignInFormEvent, SignInFormState> {
   }
 
   @override
-  // TODO: implement initialState
   SignInFormState get initialState => SignInFormState.initial();
 }
