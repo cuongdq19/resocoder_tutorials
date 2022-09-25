@@ -38,9 +38,7 @@ class NotesOverviewPage extends StatelessWidget {
               state.maybeMap(
                 orElse: () {},
                 deleteFailure: (state) => FlushbarHelper.createError(
-                  duration: const Duration(
-                    seconds: 5,
-                  ),
+                  duration: const Duration(seconds: 5),
                   message: state.noteFailure.map(
                       unableToUpdate: (_) => 'Impossible error.',
                       insufficientPermission: (_) =>

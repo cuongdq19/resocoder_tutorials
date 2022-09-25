@@ -5,7 +5,6 @@ import 'package:resocoder_ddd/injection.dart';
 import 'package:resocoder_ddd/presentation/core/app_widget.dart';
 
 Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
   configureInjection(Environment.prod);
   runApp(AppWidget());
 }
