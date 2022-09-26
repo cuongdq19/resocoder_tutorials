@@ -16,7 +16,7 @@ import 'note_dtos.dart';
 class NoteRepository implements INoteRepository {
   final Firestore _firestore;
 
-  NoteRepository(this._firestore);
+  const NoteRepository(this._firestore);
   @override
   Stream<Either<NoteFailure, KtList<Note>>> watchAll() async* {
     final userDoc = await _firestore.userDocument();
