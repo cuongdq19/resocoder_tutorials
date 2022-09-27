@@ -28,8 +28,8 @@ class NotesOverviewPage extends StatelessWidget {
           BlocListener<AuthBloc, AuthState>(
             listener: (ctx, state) {
               state.maybeMap(
-                unauthenticated: (_) => ExtendedNavigator.of(context)
-                    .pushReplacementNamed(Routes.signInPage),
+                unauthenticated: (_) =>
+                    ExtendedNavigator.of(context).replace(Routes.signInPage),
                 orElse: () {},
               );
             },

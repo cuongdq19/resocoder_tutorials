@@ -9,7 +9,6 @@ part of 'todo_item_presentation_classes.dart';
 
 T _$identity<T>(T value) => value;
 
-/// @nodoc
 class _$TodoItemPrimitiveTearOff {
   const _$TodoItemPrimitiveTearOff();
 
@@ -24,11 +23,9 @@ class _$TodoItemPrimitiveTearOff {
   }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $TodoItemPrimitive = _$TodoItemPrimitiveTearOff();
 
-/// @nodoc
 mixin _$TodoItemPrimitive {
   UniqueId get id;
   String get name;
@@ -37,7 +34,6 @@ mixin _$TodoItemPrimitive {
   $TodoItemPrimitiveCopyWith<TodoItemPrimitive> get copyWith;
 }
 
-/// @nodoc
 abstract class $TodoItemPrimitiveCopyWith<$Res> {
   factory $TodoItemPrimitiveCopyWith(
           TodoItemPrimitive value, $Res Function(TodoItemPrimitive) then) =
@@ -45,7 +41,6 @@ abstract class $TodoItemPrimitiveCopyWith<$Res> {
   $Res call({UniqueId id, String name, bool done});
 }
 
-/// @nodoc
 class _$TodoItemPrimitiveCopyWithImpl<$Res>
     implements $TodoItemPrimitiveCopyWith<$Res> {
   _$TodoItemPrimitiveCopyWithImpl(this._value, this._then);
@@ -68,7 +63,6 @@ class _$TodoItemPrimitiveCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$TodoItemPrimitiveCopyWith<$Res>
     implements $TodoItemPrimitiveCopyWith<$Res> {
   factory _$TodoItemPrimitiveCopyWith(
@@ -78,7 +72,6 @@ abstract class _$TodoItemPrimitiveCopyWith<$Res>
   $Res call({UniqueId id, String name, bool done});
 }
 
-/// @nodoc
 class __$TodoItemPrimitiveCopyWithImpl<$Res>
     extends _$TodoItemPrimitiveCopyWithImpl<$Res>
     implements _$TodoItemPrimitiveCopyWith<$Res> {
@@ -103,7 +96,6 @@ class __$TodoItemPrimitiveCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 class _$_TodoItemPrimitive extends _TodoItemPrimitive {
   const _$_TodoItemPrimitive(
       {@required this.id, @required this.name, @required this.done})

@@ -9,7 +9,6 @@ part of 'failures.dart';
 
 T _$identity<T>(T value) => value;
 
-/// @nodoc
 class _$ValueFailureTearOff {
   const _$ValueFailureTearOff();
 
@@ -59,11 +58,9 @@ class _$ValueFailureTearOff {
   }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $ValueFailure = _$ValueFailureTearOff();
 
-/// @nodoc
 mixin _$ValueFailure<T> {
   @optionalTypeArgs
   Result when<Result extends Object>({
@@ -105,14 +102,12 @@ mixin _$ValueFailure<T> {
   });
 }
 
-/// @nodoc
 abstract class $ValueFailureCopyWith<T, $Res> {
   factory $ValueFailureCopyWith(
           ValueFailure<T> value, $Res Function(ValueFailure<T>) then) =
       _$ValueFailureCopyWithImpl<T, $Res>;
 }
 
-/// @nodoc
 class _$ValueFailureCopyWithImpl<T, $Res>
     implements $ValueFailureCopyWith<T, $Res> {
   _$ValueFailureCopyWithImpl(this._value, this._then);
@@ -122,7 +117,6 @@ class _$ValueFailureCopyWithImpl<T, $Res>
   final $Res Function(ValueFailure<T>) _then;
 }
 
-/// @nodoc
 abstract class $ExceedingLengthCopyWith<T, $Res> {
   factory $ExceedingLengthCopyWith(
           ExceedingLength<T> value, $Res Function(ExceedingLength<T>) then) =
@@ -130,7 +124,6 @@ abstract class $ExceedingLengthCopyWith<T, $Res> {
   $Res call({T failedValue, int max});
 }
 
-/// @nodoc
 class _$ExceedingLengthCopyWithImpl<T, $Res>
     extends _$ValueFailureCopyWithImpl<T, $Res>
     implements $ExceedingLengthCopyWith<T, $Res> {
@@ -154,7 +147,6 @@ class _$ExceedingLengthCopyWithImpl<T, $Res>
   }
 }
 
-/// @nodoc
 class _$ExceedingLength<T>
     with DiagnosticableTreeMixin
     implements ExceedingLength<T> {
@@ -286,14 +278,12 @@ abstract class ExceedingLength<T> implements ValueFailure<T> {
   $ExceedingLengthCopyWith<T, ExceedingLength<T>> get copyWith;
 }
 
-/// @nodoc
 abstract class $EmptyCopyWith<T, $Res> {
   factory $EmptyCopyWith(Empty<T> value, $Res Function(Empty<T>) then) =
       _$EmptyCopyWithImpl<T, $Res>;
   $Res call({String failedValue});
 }
 
-/// @nodoc
 class _$EmptyCopyWithImpl<T, $Res> extends _$ValueFailureCopyWithImpl<T, $Res>
     implements $EmptyCopyWith<T, $Res> {
   _$EmptyCopyWithImpl(Empty<T> _value, $Res Function(Empty<T>) _then)
@@ -313,7 +303,6 @@ class _$EmptyCopyWithImpl<T, $Res> extends _$ValueFailureCopyWithImpl<T, $Res>
   }
 }
 
-/// @nodoc
 class _$Empty<T> with DiagnosticableTreeMixin implements Empty<T> {
   const _$Empty({@required this.failedValue}) : assert(failedValue != null);
 
@@ -432,7 +421,6 @@ abstract class Empty<T> implements ValueFailure<T> {
   $EmptyCopyWith<T, Empty<T>> get copyWith;
 }
 
-/// @nodoc
 abstract class $MultilineCopyWith<T, $Res> {
   factory $MultilineCopyWith(
           Multiline<T> value, $Res Function(Multiline<T>) then) =
@@ -440,7 +428,6 @@ abstract class $MultilineCopyWith<T, $Res> {
   $Res call({T failedValue});
 }
 
-/// @nodoc
 class _$MultilineCopyWithImpl<T, $Res>
     extends _$ValueFailureCopyWithImpl<T, $Res>
     implements $MultilineCopyWith<T, $Res> {
@@ -462,7 +449,6 @@ class _$MultilineCopyWithImpl<T, $Res>
   }
 }
 
-/// @nodoc
 class _$Multiline<T> with DiagnosticableTreeMixin implements Multiline<T> {
   const _$Multiline({@required this.failedValue}) : assert(failedValue != null);
 
@@ -581,7 +567,6 @@ abstract class Multiline<T> implements ValueFailure<T> {
   $MultilineCopyWith<T, Multiline<T>> get copyWith;
 }
 
-/// @nodoc
 abstract class $ListTooLongCopyWith<T, $Res> {
   factory $ListTooLongCopyWith(
           ListTooLong<T> value, $Res Function(ListTooLong<T>) then) =
@@ -589,7 +574,6 @@ abstract class $ListTooLongCopyWith<T, $Res> {
   $Res call({T failedValue, int max});
 }
 
-/// @nodoc
 class _$ListTooLongCopyWithImpl<T, $Res>
     extends _$ValueFailureCopyWithImpl<T, $Res>
     implements $ListTooLongCopyWith<T, $Res> {
@@ -613,7 +597,6 @@ class _$ListTooLongCopyWithImpl<T, $Res>
   }
 }
 
-/// @nodoc
 class _$ListTooLong<T> with DiagnosticableTreeMixin implements ListTooLong<T> {
   const _$ListTooLong({@required this.failedValue, @required this.max})
       : assert(failedValue != null),
@@ -743,7 +726,6 @@ abstract class ListTooLong<T> implements ValueFailure<T> {
   $ListTooLongCopyWith<T, ListTooLong<T>> get copyWith;
 }
 
-/// @nodoc
 abstract class $InvalidEmailCopyWith<T, $Res> {
   factory $InvalidEmailCopyWith(
           InvalidEmail<T> value, $Res Function(InvalidEmail<T>) then) =
@@ -751,7 +733,6 @@ abstract class $InvalidEmailCopyWith<T, $Res> {
   $Res call({T failedValue});
 }
 
-/// @nodoc
 class _$InvalidEmailCopyWithImpl<T, $Res>
     extends _$ValueFailureCopyWithImpl<T, $Res>
     implements $InvalidEmailCopyWith<T, $Res> {
@@ -773,7 +754,6 @@ class _$InvalidEmailCopyWithImpl<T, $Res>
   }
 }
 
-/// @nodoc
 class _$InvalidEmail<T>
     with DiagnosticableTreeMixin
     implements InvalidEmail<T> {
@@ -895,7 +875,6 @@ abstract class InvalidEmail<T> implements ValueFailure<T> {
   $InvalidEmailCopyWith<T, InvalidEmail<T>> get copyWith;
 }
 
-/// @nodoc
 abstract class $ShortPasswordCopyWith<T, $Res> {
   factory $ShortPasswordCopyWith(
           ShortPassword<T> value, $Res Function(ShortPassword<T>) then) =
@@ -903,7 +882,6 @@ abstract class $ShortPasswordCopyWith<T, $Res> {
   $Res call({T failedValue});
 }
 
-/// @nodoc
 class _$ShortPasswordCopyWithImpl<T, $Res>
     extends _$ValueFailureCopyWithImpl<T, $Res>
     implements $ShortPasswordCopyWith<T, $Res> {
@@ -925,7 +903,6 @@ class _$ShortPasswordCopyWithImpl<T, $Res>
   }
 }
 
-/// @nodoc
 class _$ShortPassword<T>
     with DiagnosticableTreeMixin
     implements ShortPassword<T> {

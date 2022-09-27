@@ -9,7 +9,6 @@ part of 'note_form_bloc.dart';
 
 T _$identity<T>(T value) => value;
 
-/// @nodoc
 class _$NoteFormEventTearOff {
   const _$NoteFormEventTearOff();
 
@@ -47,11 +46,9 @@ class _$NoteFormEventTearOff {
   }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $NoteFormEvent = _$NoteFormEventTearOff();
 
-/// @nodoc
 mixin _$NoteFormEvent {
   @optionalTypeArgs
   Result when<Result extends Object>({
@@ -89,14 +86,12 @@ mixin _$NoteFormEvent {
   });
 }
 
-/// @nodoc
 abstract class $NoteFormEventCopyWith<$Res> {
   factory $NoteFormEventCopyWith(
           NoteFormEvent value, $Res Function(NoteFormEvent) then) =
       _$NoteFormEventCopyWithImpl<$Res>;
 }
 
-/// @nodoc
 class _$NoteFormEventCopyWithImpl<$Res>
     implements $NoteFormEventCopyWith<$Res> {
   _$NoteFormEventCopyWithImpl(this._value, this._then);
@@ -106,7 +101,6 @@ class _$NoteFormEventCopyWithImpl<$Res>
   final $Res Function(NoteFormEvent) _then;
 }
 
-/// @nodoc
 abstract class _$InitializedCopyWith<$Res> {
   factory _$InitializedCopyWith(
           _Initialized value, $Res Function(_Initialized) then) =
@@ -114,7 +108,6 @@ abstract class _$InitializedCopyWith<$Res> {
   $Res call({Option<Note> initialNoteOption});
 }
 
-/// @nodoc
 class __$InitializedCopyWithImpl<$Res> extends _$NoteFormEventCopyWithImpl<$Res>
     implements _$InitializedCopyWith<$Res> {
   __$InitializedCopyWithImpl(
@@ -136,7 +129,6 @@ class __$InitializedCopyWithImpl<$Res> extends _$NoteFormEventCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 class _$_Initialized implements _Initialized {
   const _$_Initialized(this.initialNoteOption)
       : assert(initialNoteOption != null);
@@ -243,7 +235,6 @@ abstract class _Initialized implements NoteFormEvent {
   _$InitializedCopyWith<_Initialized> get copyWith;
 }
 
-/// @nodoc
 abstract class _$BodyChangedCopyWith<$Res> {
   factory _$BodyChangedCopyWith(
           _BodyChanged value, $Res Function(_BodyChanged) then) =
@@ -251,7 +242,6 @@ abstract class _$BodyChangedCopyWith<$Res> {
   $Res call({String bodyStr});
 }
 
-/// @nodoc
 class __$BodyChangedCopyWithImpl<$Res> extends _$NoteFormEventCopyWithImpl<$Res>
     implements _$BodyChangedCopyWith<$Res> {
   __$BodyChangedCopyWithImpl(
@@ -271,7 +261,6 @@ class __$BodyChangedCopyWithImpl<$Res> extends _$NoteFormEventCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 class _$_BodyChanged implements _BodyChanged {
   const _$_BodyChanged(this.bodyStr) : assert(bodyStr != null);
 
@@ -375,7 +364,6 @@ abstract class _BodyChanged implements NoteFormEvent {
   _$BodyChangedCopyWith<_BodyChanged> get copyWith;
 }
 
-/// @nodoc
 abstract class _$ColorChangedCopyWith<$Res> {
   factory _$ColorChangedCopyWith(
           _ColorChanged value, $Res Function(_ColorChanged) then) =
@@ -383,7 +371,6 @@ abstract class _$ColorChangedCopyWith<$Res> {
   $Res call({Color color});
 }
 
-/// @nodoc
 class __$ColorChangedCopyWithImpl<$Res>
     extends _$NoteFormEventCopyWithImpl<$Res>
     implements _$ColorChangedCopyWith<$Res> {
@@ -404,7 +391,6 @@ class __$ColorChangedCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 class _$_ColorChanged implements _ColorChanged {
   const _$_ColorChanged(this.color) : assert(color != null);
 
@@ -508,7 +494,6 @@ abstract class _ColorChanged implements NoteFormEvent {
   _$ColorChangedCopyWith<_ColorChanged> get copyWith;
 }
 
-/// @nodoc
 abstract class _$TodosChangedCopyWith<$Res> {
   factory _$TodosChangedCopyWith(
           _TodosChanged value, $Res Function(_TodosChanged) then) =
@@ -516,7 +501,6 @@ abstract class _$TodosChangedCopyWith<$Res> {
   $Res call({KtList<TodoItemPrimitive> todos});
 }
 
-/// @nodoc
 class __$TodosChangedCopyWithImpl<$Res>
     extends _$NoteFormEventCopyWithImpl<$Res>
     implements _$TodosChangedCopyWith<$Res> {
@@ -537,7 +521,6 @@ class __$TodosChangedCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 class _$_TodosChanged implements _TodosChanged {
   const _$_TodosChanged(this.todos) : assert(todos != null);
 
@@ -642,13 +625,11 @@ abstract class _TodosChanged implements NoteFormEvent {
   _$TodosChangedCopyWith<_TodosChanged> get copyWith;
 }
 
-/// @nodoc
 abstract class _$SavedCopyWith<$Res> {
   factory _$SavedCopyWith(_Saved value, $Res Function(_Saved) then) =
       __$SavedCopyWithImpl<$Res>;
 }
 
-/// @nodoc
 class __$SavedCopyWithImpl<$Res> extends _$NoteFormEventCopyWithImpl<$Res>
     implements _$SavedCopyWith<$Res> {
   __$SavedCopyWithImpl(_Saved _value, $Res Function(_Saved) _then)
@@ -658,7 +639,6 @@ class __$SavedCopyWithImpl<$Res> extends _$NoteFormEventCopyWithImpl<$Res>
   _Saved get _value => super._value as _Saved;
 }
 
-/// @nodoc
 class _$_Saved implements _Saved {
   const _$_Saved();
 
@@ -748,7 +728,6 @@ abstract class _Saved implements NoteFormEvent {
   const factory _Saved() = _$_Saved;
 }
 
-/// @nodoc
 class _$NoteFormStateTearOff {
   const _$NoteFormStateTearOff();
 
@@ -769,11 +748,9 @@ class _$NoteFormStateTearOff {
   }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $NoteFormState = _$NoteFormStateTearOff();
 
-/// @nodoc
 mixin _$NoteFormState {
   Note get note;
   bool get showErrorMessages;
@@ -784,7 +761,6 @@ mixin _$NoteFormState {
   $NoteFormStateCopyWith<NoteFormState> get copyWith;
 }
 
-/// @nodoc
 abstract class $NoteFormStateCopyWith<$Res> {
   factory $NoteFormStateCopyWith(
           NoteFormState value, $Res Function(NoteFormState) then) =
@@ -799,7 +775,6 @@ abstract class $NoteFormStateCopyWith<$Res> {
   $NoteCopyWith<$Res> get note;
 }
 
-/// @nodoc
 class _$NoteFormStateCopyWithImpl<$Res>
     implements $NoteFormStateCopyWith<$Res> {
   _$NoteFormStateCopyWithImpl(this._value, this._then);
@@ -840,7 +815,6 @@ class _$NoteFormStateCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$NoteFormStateCopyWith<$Res>
     implements $NoteFormStateCopyWith<$Res> {
   factory _$NoteFormStateCopyWith(
@@ -858,7 +832,6 @@ abstract class _$NoteFormStateCopyWith<$Res>
   $NoteCopyWith<$Res> get note;
 }
 
-/// @nodoc
 class __$NoteFormStateCopyWithImpl<$Res>
     extends _$NoteFormStateCopyWithImpl<$Res>
     implements _$NoteFormStateCopyWith<$Res> {
@@ -891,7 +864,6 @@ class __$NoteFormStateCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 class _$_NoteFormState implements _NoteFormState {
   const _$_NoteFormState(
       {@required this.note,

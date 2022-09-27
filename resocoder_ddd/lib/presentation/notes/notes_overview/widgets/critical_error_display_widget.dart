@@ -28,9 +28,7 @@ class CriticalErrorDisplay extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
           FlatButton(
-              onPressed: () {
-                print('Sending email');
-              },
+              onPressed: () {},
               child: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: const <Widget>[
