@@ -7,6 +7,7 @@ import 'package:resocoder_ddd/application/notes/note_form/note_form_bloc.dart';
 import 'package:resocoder_ddd/domain/notes/note.dart';
 import 'package:resocoder_ddd/injection.dart';
 import 'package:resocoder_ddd/presentation/notes/note_form/widgets/body_field_widget.dart';
+import 'package:resocoder_ddd/presentation/notes/note_form/widgets/color_field_widget.dart';
 import 'package:resocoder_ddd/presentation/routes/router.gr.dart';
 
 class NoteFormPage extends StatelessWidget {
@@ -113,7 +114,7 @@ class NoteFormPageScaffold extends StatelessWidget {
         ),
         actions: <Widget>[
           IconButton(
-            icon: Icon(Icons.check),
+            icon: const Icon(Icons.check),
             onPressed: () {
               context.bloc<NoteFormBloc>().add(const NoteFormEvent.saved());
             },
@@ -127,8 +128,9 @@ class NoteFormPageScaffold extends StatelessWidget {
             autovalidate: state.showErrorMessages,
             child: SingleChildScrollView(
               child: Column(
-                children: <Widget>[
-                  const BodyField(),
+                children: const <Widget>[
+                  BodyField(),
+                  ColorField(),
                 ],
               ),
             ),

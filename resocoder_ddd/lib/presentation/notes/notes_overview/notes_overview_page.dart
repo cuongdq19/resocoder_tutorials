@@ -29,7 +29,7 @@ class NotesOverviewPage extends StatelessWidget {
             listener: (ctx, state) {
               state.maybeMap(
                 unauthenticated: (_) =>
-                    ExtendedNavigator.of(context).replace(Routes.signInPage),
+                    ExtendedNavigator.of(ctx).replace(Routes.signInPage),
                 orElse: () {},
               );
             },
@@ -46,7 +46,7 @@ class NotesOverviewPage extends StatelessWidget {
                           'Insufficient permissions.',
                       unexpected: (_) =>
                           'Unexpected error occurred while deleting, please contact support.'),
-                ).show(context),
+                ).show(ctx),
               );
             },
           )

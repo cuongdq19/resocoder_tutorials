@@ -47,7 +47,7 @@ class SignInForm extends StatelessWidget {
               const SizedBox(height: 8),
               TextFormField(
                 autovalidate: state.showErrorMessages,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   prefixIcon: Icon(Icons.email),
                   labelText: 'Email',
                 ),
@@ -67,7 +67,7 @@ class SignInForm extends StatelessWidget {
               const SizedBox(height: 8),
               TextFormField(
                 autovalidate: state.showErrorMessages,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   prefixIcon: Icon(Icons.lock),
                   labelText: 'Password',
                 ),
@@ -115,7 +115,7 @@ class SignInForm extends StatelessWidget {
                       .bloc<SignInFormBloc>()
                       .add(const SignInFormEvent.signInWithGooglePressed());
                 },
-                child: Text(
+                child: const Text(
                   'SIGN IN WITH GOOGLE',
                   style: TextStyle(
                     color: Colors.white,
