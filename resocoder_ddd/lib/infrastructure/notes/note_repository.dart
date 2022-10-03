@@ -21,7 +21,7 @@ class NoteRepository implements INoteRepository {
   Stream<Either<NoteFailure, KtList<Note>>> watchAll() async* {
     final userDoc = await _firestore.userDocument();
     yield* userDoc.noteCollection
-        .orderBy('serverTimestamp', descending: true)
+        .orderBy('serverTimeStamp', descending: true)
         .snapshots()
         .map((snapshot) => right<NoteFailure, KtList<Note>>(
               snapshot.documents
